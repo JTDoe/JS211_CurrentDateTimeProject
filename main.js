@@ -1,5 +1,7 @@
 // **THIS IS INCREDIBLY IMPORTANT THAT YOU DO BOTH SECTIONS!!! You will be doing only front-end work in 421 and you need to brush up on your HTML elements**
 
+// const syntax = require("postcss-html");
+
 
 // ***************************
 //          PART ONE
@@ -15,21 +17,20 @@ document.getElementById("display-element").innerHTML = currentDate;
  
 
 // Write a JavaScript program to convert a number to a string.
-// let num = 6;
-// let text = num.toString();
-// console.log(text)
+let num = 21;
+let cN2S = num.toString();
 
-// const convertNumberToString = (string) => {
-//   const result = Number(string)
-//   return result
-// }
+console.log(num)
+console.log(cN2S)
 
-// console.log(convertNumberToString(5))
+
 
 // Write a JavaScript program to convert a string to the number.
-// let x = number("1000")
-// console.log(number)
+let str = '12'
+let cS2N = parseInt(str);
 
+console.log(str)
+console.log(cS2N)
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
   // * Boolean
   // * Null
@@ -37,72 +38,40 @@ document.getElementById("display-element").innerHTML = currentDate;
   // * Number
   // * NaN
   // * String
-  
-const checkDataType = () => {
-return typeof element
+let whatType = 5
+let WhatTypeAmI = typeof whatType
 
-}
+console.log(whatType)
+console.log(WhatTypeAmI)
 
-console.log(checkDataType(5))
-  
+
 // Write a JavaScript program that adds 2 numbers together.
-let z = document.getElementById("z")
-let y = document.getElementById("y")
-let sum = z + y
+let num1 = 30
+let num2 = 40
 
-const addTwoNumbers = (z, y) => {
- const sum = z + y
- document.getElementById("sum").innerHTML
-}
+let sum = num1 + num2
 
 console.log(sum)
 
-// const num1 = 6;
-// const num2 = 5;
-
-// const sum = num1 + num2;
-
-// console.log()
-
-
 // Write a JavaScript program that runs only when 2 things are true.
-const age = 34
-const hasKids = true
+let X = true;
+let Y = true;
 
-if (age >= 30 && hasKids) {
-  console.log("Jorden is over 30 and has kids")
+const bothTrue = () => {
+  if (X == true && Y == true) {
+  console.log("both are true")
+} else {
+  console.log('one or more is false')
 }
-
-
-
-
-
+}
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
-const brownHair = false
-const blueEyes = true
-
-if (brownHair || blueEyes) {
-  console.log("jorden has brown hair or blue eyes")
-}
-
-else {
-console.log("jorden doesnt have brown hair or blue eyes")
-}
-
 
 
 // Write a JavaScript program that runs when both things are not true.  
-// const bigNose = false
-// const bigEars = false
 
-// if (bigNose || bigEars) {
 
-// }
 
-// else () {
-//     console.log("jorden doesnt have a big nose or big ears");
-//   } 
 
 // ***************************
 //         PART TWO
