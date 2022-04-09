@@ -1,5 +1,7 @@
 // **THIS IS INCREDIBLY IMPORTANT THAT YOU DO BOTH SECTIONS!!! You will be doing only front-end work in 421 and you need to brush up on your HTML elements**
 
+// const { string } = require("stylelint/lib/formatters");
+
 // const syntax = require("postcss-html");
 
 
@@ -18,10 +20,15 @@ document.getElementById("display-element").innerHTML = currentDate;
 
 // Write a JavaScript program to convert a number to a string.
 let num = 21;
-let cN2S = num.toString();
+const cN2S = () => {
 
-console.log(num)
-console.log(cN2S)
+ let newstr = num.toString();
+ console.log(newstr)
+}
+cN2S()
+
+// console.log(num)
+// console.log(cN2S)
 
 
 
@@ -29,8 +36,8 @@ console.log(cN2S)
 let str = '12'
 let cS2N = parseInt(str);
 
-console.log(str)
 console.log(cS2N)
+
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
   // * Boolean
   // * Null
@@ -38,24 +45,46 @@ console.log(cS2N)
   // * Number
   // * NaN
   // * String
-let whatType = 5
-let WhatTypeAmI = typeof whatType
+const determineType = () => {
+  let entry = document.getElementById('typeof').value
+  if (typeof(entry) === 'number') {
+    console.log('Number')
+  }
+  if (typeof(entry) === 'string') {
+    console.log('string')
+  }
+  if (typeof(entry) === 'boolean') {
+    console.log('boolean')
+  }
+  if (typeof(entry) === 'null') {
+    console.log('null')
+  }
+  if (typeof(entry) === 'NaN') {
+    console.log('NaN')
+  }
+  if (typeof(entry) === 'undefined') {
+    console.log('undefined')
+  }
+}
 
-console.log(whatType)
-console.log(WhatTypeAmI)
+console.log(determineType('hello'))
+
 
 
 // Write a JavaScript program that adds 2 numbers together.
-let num1 = 30
-let num2 = 40
+const addTwoNumbers = () => {
+  let num1 = document.getElementById('z').value
+  let num2 = document.getElementById('y').value
+  num1 = parseInt(num1)
+  num2 = parseInt(num2)
+  let sum = num1 + num2
+  document.getElementById('sum').innerHTML = sum
+}
 
-let sum = num1 + num2
-
-console.log(sum)
 
 // Write a JavaScript program that runs only when 2 things are true.
 let X = true;
-let Y = true;
+let Y = false;
 
 const bothTrue = () => {
   if (X == true && Y == true) {
@@ -64,7 +93,7 @@ const bothTrue = () => {
   console.log('one or more is false')
 }
 }
-
+bothTrue()
 // Write a JavaScript program that runs when 1 of 2 things are true.
 
 
