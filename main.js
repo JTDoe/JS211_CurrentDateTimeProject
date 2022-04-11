@@ -19,24 +19,27 @@ document.getElementById("display-element").innerHTML = currentDate;
  
 
 // Write a JavaScript program to convert a number to a string.
-let num = 21;
 const cN2S = () => {
-
+ let num = document.getElementById('convertToString').value
  let newstr = num.toString();
+ document.getElementById('convertToStringH1').innerHTML = newstr
  console.log(newstr)
 }
 cN2S()
 
-// console.log(num)
-// console.log(cN2S)
 
 
 
 // Write a JavaScript program to convert a string to the number.
-let str = '12'
-let cS2N = parseInt(str);
 
-console.log(cS2N)
+const cS2N = () => {
+  let str = document.getElementById('stringToNumber').value
+  let myNewNum = parseInt(str)
+  document.getElementById('convertToNumberH1').innerHTML = myNewNum
+  console.log(myNewNum)
+}
+cS2N()
+
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
   // * Boolean
@@ -67,7 +70,7 @@ const determineType = () => {
   }
 }
 
-console.log(determineType('hello'))
+console.log(determineType(true))
 
 
 
@@ -83,10 +86,10 @@ const addTwoNumbers = () => {
 
 
 // Write a JavaScript program that runs only when 2 things are true.
-let X = true;
-let Y = false;
 
 const bothTrue = () => {
+  let X = document.getElementById('X').value
+  let Y = document.getElementById('Y').value
   if (X == true && Y == true) {
   console.log("both are true")
 } else {
@@ -95,11 +98,31 @@ const bothTrue = () => {
 }
 bothTrue()
 // Write a JavaScript program that runs when 1 of 2 things are true.
+let J = false
+let K = true
+const oneTrue = () => {
+  if (J == true || K == true) {
+    console.log('one is true')
+    // return "one is true"
+  } else {
+    console.log('neither is true')
+  // return "neither is true"
+}
+}
+oneTrue ()
 
 
 // Write a JavaScript program that runs when both things are not true.  
-
-
+let T = false
+let H = false
+const bothFalse = () => {
+  if (T == false && H == false) {
+    console.log('both are false')
+  } else {
+    console.log('both are not false')
+  }
+}
+bothFalse()
 
 
 // ***************************
